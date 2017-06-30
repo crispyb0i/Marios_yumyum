@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @prduct = Product.new
+    @product = Product.new
   end
 
   def edit
