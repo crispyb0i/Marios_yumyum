@@ -6,10 +6,10 @@ Review.destroy_all
                 cost: rand(1..20),
                 country_of_origin: Faker::Address.country,
   )
-  5.times do |review|
+  rand(1..10).times do |review|
     Review.create!(
     author: Faker::Superhero.name,
-    content_body: Faker::Hipster.paragraph(2),
+    content_body: Faker::Lorem.characters(70),
     rating: rand(1..5),
     product_id: new_product.id
     )

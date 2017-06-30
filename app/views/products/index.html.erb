@@ -1,9 +1,32 @@
-<h1>Welcome to Mario's Yum Yum!</h1>
 
+<h3>Check Out Our World Famous Delicacies!</h3>
 <ul>
   <% @products.each do |product| %>
   <li><%=link_to product.name, product_path(product)%></li>
   <% end %>
 </ul>
+
+<h3>Three Most Recently Created Products</h3>
+<ul>
+  <%@products.three_most_recent.each do |product|%>
+  <li><%=link_to product.name, product_path(product)%></li>
+  <% end %>
+</ul>
+
+<h3>Three Most Reviewed Products</h3>
+<ul>
+  <%@products.most_reviewed_products.each do |product|%>
+  <li><%=link_to product.name, product_path(product)%></li>
+  <% end %>
+</ul>
+
+<% if @products.local.length>0 %>
+  <% @products.local.each do |product| %>
+    <div class='local_products'>
+      <p><strong>Products from USA:</strong></p>
+      <h4><%= link_to product.name, product_path(product) %></h4>
+    </div>
+  <% end %>
+<% end %>
 
  <%= link_to 'New Product', new_product_path  %>

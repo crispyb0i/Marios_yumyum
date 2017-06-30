@@ -6,5 +6,7 @@ class Review < ApplicationRecord
   validates :content_body, length: { maximum: 250,
   too_long: "250 characters is the maximum allowed" }
   validates :rating, :presence => true
-  validates :name, :presence => true
+  validates :rating, numericality: { only_integer: true }
+  validates :rating, numericality: { greater_than: 0 }
+  validates :rating, numericality: { less_than: 6 }
 end
