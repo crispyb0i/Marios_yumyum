@@ -21,9 +21,9 @@
 </ul>
 
 <% if @products.local.length>0 %>
+<h3>Local Products from USA</h3>
   <% @products.local.each do |product| %>
     <div class='local_products'>
-      <p><strong>Products from USA:</strong></p>
       <h4><%= link_to product.name, product_path(product) %></h4>
     </div>
   <% end %>

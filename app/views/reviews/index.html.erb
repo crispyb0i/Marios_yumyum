@@ -1,5 +1,9 @@
+
 <div class="container">
   <h1>Reviews for <%=@product.name%></h1>
+  <% if @product.reviews.length == 0 %>
+    <h3>There are no reviews for this product yet</h3>
+  <% end %>
   <ul>
     <%@product.reviews.each do |review|%>
       <h4>Author: <%= review.author %></h4>
@@ -9,5 +13,6 @@
     <%end%>
   </ul>
 </div>
+
 
   <%= link_to 'New Review', new_product_review_path(@product) %>
