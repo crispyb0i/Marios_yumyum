@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'shoulda/matchers'
 
 # Specs in this file have access to a helper object that includes
 # the ReviewsHelper. For example:
@@ -10,6 +11,9 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe ReviewsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+# RSpec.describe ReviewsHelper, type: :helper do
+#   it { should validate_presence_of :author }
+#   it { should validate_presence_of :content_body }
+#   it { should validate_presence_of :rating }
+#   it { should belong_to :product }
+# end

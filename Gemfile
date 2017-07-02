@@ -39,11 +39,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'launchy'
-  gem 'pry'
-  gem 'shoulda-matchers'
-  gem 'rspec-rails'
   gem 'capybara'
   gem 'faker'
 end

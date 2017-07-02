@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :product
+  validates :author, :presence => true
   validates :content_body, :presence => true
   validates :content_body, length: { minimum: 50,
   too_short: "50 characters is the minimum allowed" }
